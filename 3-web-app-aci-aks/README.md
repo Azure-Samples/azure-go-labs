@@ -32,25 +32,25 @@ The prerequisites for deploying to Azure Web Apps are:
 
 1. We've created a resource group for this lab, which you can get with the following CLI command:
 
-```bash
-RESOURCE_GROUP=$(az group list | jq -r '[.[].name|select(. | startswith("Group-"))][0]')
-LOCATION='eastus'
-SUFFIX=$(LC_CTYPE=C tr -cd 'a-z0-9' < /dev/urandom | head -c 5)
-```
+    ```bash
+    RESOURCE_GROUP=$(az group list | jq -r '[.[].name|select(. | startswith("Group-"))][0]')
+    LOCATION='eastus'
+    SUFFIX=$(LC_CTYPE=C tr -cd 'a-z0-9' < /dev/urandom | head -c 5)
+    ```
 
 2. Create an app services plan
 
-``bash
-az appservice plan create -n deploy-lab -g $RESOURCE_GROUP --is-linux
-```
+    ``bash
+    az appservice plan create -n deploy-lab -g $RESOURCE_GROUP --is-linux
+    ```
 
 3. Select the Web App deployment user with `az webapp deployment set`. If a user has not been created with the given user name in your tenant, one is created. The user name must be _universally unique_.
 
-```bash
-WEBAPP_PASS=$(LC_CTYPE=C tr -cd 'A-Za-z0-9' < /dev/urandom | head -c 16)
-WEBAPP_USER="gopher$SUFFIX"
-az webapp deployment user set --user-name $WEBAPP_USER --password $WEBAPP_PASS
-```
+    ```bash
+    WEBAPP_PASS=$(LC_CTYPE=C tr -cd 'A-Za-z0-9' < /dev/urandom | head -c 16)
+    WEBAPP_USER="gopher$SUFFIX"
+    az webapp deployment user set --user-name $WEBAPP_USER --password $WEBAPP_PASS
+    ```
 
 2. Create the application. This doesn't deploy it, but sets up the infrastructure in Azure and provides deployment information. For this lab, use `--deployment-local-git` which sets up a git repository on a resource in Azure that is used to build and deploy the application.
 
@@ -135,7 +135,7 @@ We'll be using the App Services Plan created in the last section, so if you skip
 1. Create an ACR to deploy the container image to.
 
 ```bash
-REGISTRY_NAME="acr2018$SUFFIX"
+REGISTRY_NAME="acr2018${SUFFIX}"
 az acr create -g $RESOURCE_GROUP -l $LOCATION --name $REGISTRY_NAME --sku Basic --admin-enabled true
 ```
 
