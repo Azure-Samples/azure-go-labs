@@ -1,57 +1,22 @@
-# Project Name
+# Azure Samples Lab for Go
 
-(short, 1-3 sentenced, description of the project)
+A collection of samples demonstrating how to create cloud-native applications with Go on azure.
 
-## Features
-
-This project framework provides the following features:
-
-* Feature 1
-* Feature 2
-* ...
-
-## Getting Started
-
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+## 1. Build and Containerize your Go application
 
 
-## Demo
+In this lab we will build a sample Go web application locally as a binary. We will then build the Go application using Docker's multi-stage build capabilities using Azure Container Registry Build. 
 
-A demo app is included to show how to use the project.
+[Go to lab](1-app-hello-echo) | Duration: 5-10 minutes
 
-To run the demo, follow these steps:
+## 2. Deploy your Go application to an Azure Virtual Machine Scale Set using Azure CLI, Azure Resource Manager or Terraform
 
-(Add steps to start up the demo)
+In this lab we will deploy our sample Go web application binary to an Azure Virtual Machine Scale Set with the help of cloud-init, systemd and your choice of Azure CLI, Azure Resource Manager or Terraform.
 
-1.
-2.
-3.
+[Go to lab](2-vmss-cli-arm-tf) | Duration: 10 minutes
 
-## Resources
+## 3. Deploy your Go application to Azure Web Apps, Azure Web Apps for Containers, Azure Container Instances or Azure Kubernetes Service
 
-(Any additional resources or related projects)
+In this lab we will deploy our Go web application, in a container, to your choice of Azure Web Apps Azure Web Apps for Containers, Azure Container Instances and Azure Kubernetes Service.
 
-- Link to supporting information
-- Link to similar sample
-- ...
+[Go to lab](3-web-app-aci-aks) | Duration: 10-15 minutes
