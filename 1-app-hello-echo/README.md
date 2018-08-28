@@ -80,7 +80,7 @@ To build using ACR Build, which will push our Dockerfile and code to the cloud, 
 
 The fully-qualified name of the image in our Container Registry will then be `$REGISTRY_NAME'.azurecr.io/hello-echo:latest'`. Let's output this with:
 
-    echo $REGISTRY_NAME'.azurecr.io/hello-echo:latest'
+    echo "${REGISTRY_NAME}.azurecr.io/hello-echo:latest"
 
 Congratulations, you have compiled your Go application and built your first image inside Azure Container Registry, using ACR Build and Docker multi-stage builds. This can be used on local and remote machines via `az acr login -n $REGISTRY_NAME` and `docker run -it $REGISTRY_NAME'.azurecr.io/hello-echo:latest'` which we'll explore in a future tutorial.
 
