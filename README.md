@@ -20,3 +20,9 @@ In this lab we will deploy our sample Go web application binary to an Azure Virt
 In this lab we will deploy our Go web application, in a container, to your choice of Azure Web Apps Azure Web Apps for Containers, Azure Container Instances and Azure Kubernetes Service.
 
 [Go to lab](3-web-app-aci-aks) | Duration: 10-15 minutes
+
+## 4. Deploy and try a Go modules proxy from project Athens
+
+In this lab you will try out a Go modules proxy and optionally deploy your own on Azure App Service.
+
+[Go to lab](4-go-modules-proxy) | Duration: 10 or 20 minutes
