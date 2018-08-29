@@ -89,7 +89,6 @@ The prerequisites for deploying to Azure Web Apps are:
     
     There is a hook which builds every time a push completes, and then deploys to all running instances if the build succeeds. This deploy operation is guaranteed to not interrupt availability.
 
-    > Command line
     ```bash
     DEPLOY_URL=$(az webapp deployment source config-local-git -n $APP_NAME -g $RESOURCE_GROUP -o tsv)
     GIT_URL=$(echo $DEPLOY_URL | sed -e "s/$WEBAPP_USER/$WEBAPP_USER:$WEBAPP_PASS/")
@@ -174,7 +173,6 @@ from ACR, so a "scratch" container will be used for the initial creation.
 
 6. Wait a few moments for the container to deploy and restart. Then send a request to the remote application:
 
-    > bash
     ```bash
     curl -X POST --data 'Hello world!' http://$APP_NAME.azurewebsites.net/echo
     ```
