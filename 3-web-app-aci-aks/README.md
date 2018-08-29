@@ -40,7 +40,7 @@ The prerequisites for deploying to Azure Web Apps are:
 
 2. Create an app services plan
 
-    ``bash
+    ```bash
     az appservice plan create -n deploy-lab -g $RESOURCE_GROUP --is-linux
     ```
 
