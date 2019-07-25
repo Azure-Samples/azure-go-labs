@@ -1,28 +1,32 @@
 # Azure Samples Lab for Go
 
-A collection of samples demonstrating how to create cloud-native applications with Go on azure.
+A collection of labs demonstrating how to develop applications with Go, Visual Studio Code, the Windows Subsytem for Linux (WSL) 2 and Azure.
 
-## 1. Build and Containerize your Go application
+## Build and Containerize a Go application
 
+In this lab we will build a sample Go web application locally as a binary. We will then build the Go application in the cloud using Azure Container Registry (ACR) Build and Docker's multi-stage build capabilities.
 
-In this lab we will build a sample Go web application locally as a binary. We will then build the Go application using Docker's multi-stage build capabilities using Azure Container Registry Build. 
+[Go to lab](1-app-hello-echo/README.md)
 
-[Go to lab](1-app-hello-echo) | Duration: 5-10 minutes
+## Containerize a Go application using Visual Studio Code and the Docker extension
 
-## 2. Deploy your Go application to an Azure Virtual Machine Scale Set using Azure CLI, Azure Resource Manager or Terraform
+Create, build and run a container for a Go application using the Docker extension for Visual Studio Code to generate Dockerfiles. This lab also shows the Docker extension's support for the Windows Subsystem for Linux (WSL) 2.
 
-In this lab we will deploy our sample Go web application binary to an Azure Virtual Machine Scale Set with the help of cloud-init, systemd and your choice of Azure CLI, Azure Resource Manager or Terraform.
+[Go to lab](1-vscode-go-docker/README.md)
 
-[Go to lab](2-vmss-cli-arm-tf) | Duration: 10 minutes
+## Open Source Development with the Windows Terminal (Preview) and the Windows Subsystem for Linux (WSL) 2
 
-## 3. Deploy your Go application to Azure Web Apps, Azure Web Apps for Containers, Azure Container Instances or Azure Kubernetes Service
+This project walks you through setting up and customizing a Windows PC for Open Source development. We'll introduce you to the Windows Terminal and Windows Subsystem for Linux (WSL) 2. At the end of this lab you will use VS Code to debug an application running in WSL.
 
-In this lab we will deploy our Go web application, in a container, to your choice of Azure Web Apps Azure Web Apps for Containers, Azure Container Instances and Azure Kubernetes Service.
+[Go to lab](1-windows-oss-terminal-wsl/README.md)
 
-[Go to lab](3-web-app-aci-aks) | Duration: 10-15 minutes
+## Use Hyperscale (Citus) to speed up analytics
 
-## 4. Deploy and try a Go modules proxy from project Athens
+This lab is an introduction to Azure Database for PostgreSQL Hyperscale (Citus). First, you will create a cluster to scale out PostgreSQL and turn it into a distributed database. Then, you will create a schema and tables, load test data, and create a rollup function to massively speed up your query workload. 
 
-In this lab you will try out a Go modules proxy and optionally deploy your own on Azure App Service.
+[Go to lab](1-postgres-citus/README.md)
 
-[Go to lab](4-go-modules-proxy) | Duration: 10 or 20 minutes
+## More labs
+
+For more labs, see [MORE.md](MORE.md)
+
