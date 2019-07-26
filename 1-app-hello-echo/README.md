@@ -88,7 +88,7 @@ az group create --name $RESOURCE_GROUP --location $LOCATION
 Now let's use the Azure CLI (az) to create an Azure Container Registry and build an image in the cloud.
 
 ```
-az acr create -g $RESOURCE_GROUP -l $LOCATION --name $REGISTRY_NAME --sku Basic
+az acr create -g $RESOURCE_GROUP -l $LOCATION --name $REGISTRY_NAME --sku Basic --admin-enabled
 ```
 
 (The `az acr create` command may take a minute or so.)
