@@ -121,7 +121,7 @@ You can deploy the same application as a single stand-alone container to Azure C
 Ensure you have run the section above to set environment variables, as these are re-used:
 
 ```bash
-CONTAINER_IMAGE='hello-flask:latest'
+CONTAINER_IMAGE='hello-echo:latest'
 # get our container registry password
 REGISTRY_PASSWORD=$(az acr credential show -n $REGISTRY_NAME | jq -r .passwords[0].value)
 
