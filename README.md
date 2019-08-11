@@ -1,4 +1,4 @@
-# Azure Samples Lab for Go
+# Azure Go Labs
 
 A collection of labs demonstrating how to develop applications with Go, Visual Studio Code, the Windows Subsytem for Linux (WSL) 2 and Azure.
 
