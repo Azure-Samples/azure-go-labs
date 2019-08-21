@@ -111,11 +111,9 @@ Run our application with `go run`
 go run main.go
 ```
 
-Use a web browser to open <http://wsl.local> to see the site is working. You are now running the Linux version of Go locally on Windows via WSL. 
+Use a web browser to open <http://localhost:8080> to see the site is working. You are now running the Linux version of Go locally on Windows via WSL. 
 
 If you are running `go run main.go` inside tmux, mentioned above, you can open another pane and run `curl localhost:8080/echo` or [hey](https://github.com/rakyll/hey) via `hey http://localhost:8080/echo' to send some load to our application.
-
-**Note:** This preview version of WSL 2 requires obtaining the ip address of the WSL 2 distro in order to browse a web site hosted in WSL 2. We have made localhost available via `wsl.local` using [go-wsl2-host](https://github.com/shayne/go-wsl2-host) (see: [REQUIREMENTS.md](REQUIREMENTS.md)). But, if you have not installed this, you can find your WSL2_IP_ADDRESS by running the following in the Ubuntu shell: `ifconfig | grep inet | awk 'FNR==1{print $2}'`
 
 ## Debug a Go project with VS Code
 
