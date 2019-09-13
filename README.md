@@ -1,3 +1,13 @@
+---
+page_type: sample
+languages:
+- go
+products:
+- azure
+description: "A collection of labs demonstrating how to develop applications with Go, Visual Studio Code, the Windows Subsytem for Linux (WSL) 2 and Azure."
+urlFragment: azure-go-labs
+---
+
 # Azure Go Labs
 
 A collection of labs demonstrating how to develop applications with Go, Visual Studio Code, the Windows Subsytem for Linux (WSL) 2 and Azure.
